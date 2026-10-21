@@ -4,3 +4,5 @@ __pycache__/
 .venv/
 *.jpg
 *.pdf
+PHASE3_INSTRUCTIONS.md
+CONTEXT_RULES_en.md

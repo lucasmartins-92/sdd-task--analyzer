@@ -11,7 +11,7 @@
 
 ## 1. Fonte da Verdade
 
-1. O contrato técnico em `.context/contracts/` é a **Single Source of Truth**.
+1. O contrato técnico em `specs/` é a **Single Source of Truth**.
 2. O arquivo `tests/test_harness.py` é o **homologador automático**. O código só é considerado pronto quando 100% dos cenários passarem.
 3. O agente não deve inferir comportamento não especificado. Se o contrato for omisso ou ambíguo, o agente deve registrar a dúvida e solicitar esclarecimento, sem assumir.
 
@@ -94,9 +94,8 @@ O agente **NÃO PODE**:
 
 ```
 root/
-├── .context/
-│   ├── CONTEXT_RULES.md
-│   └── contracts/
+├── CONTEXT_RULES.md
+├── specs/              # Contrato técnico
 ├── src/
 │   ├── modules/        # Domínio e regras de negócio (ex.: task_analyzer)
 │   └── shared/         # Utilitários, exceções e componentes comuns
@@ -119,7 +118,7 @@ root/
 
 ## 6. Ciclo de Trabalho do Agente
 
-1. **Ler** este arquivo, o contrato em `.context/contracts/` e `tests/test_harness.py`.
+1. **Ler** este arquivo, o contrato em `specs/` e `tests/test_harness.py`.
 2. **Implementar** estritamente conforme o contrato.
 3. **Executar** `pytest tests/test_harness.py` e a suíte completa.
 4. **Corrigir o código** (nunca os testes) até 100% de aprovação.

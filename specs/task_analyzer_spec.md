@@ -3,7 +3,7 @@
 **Módulo:** TaskAnalyzer
 **Paradigma:** Spec-Driven Development (SDD)
 **Linguagem:** Python 3.11+
-**Localização sugerida:** `.context/contracts/task_analyzer_spec.md`
+**Localização sugerida:** `specs/task_analyzer_spec.md`
 **Status:** Fonte única da verdade (Single Source of Truth) do módulo.
 
 ---
@@ -287,4 +287,4 @@ tests/
 - [ ] Cenários 1, 2 e 3 aprovados no `test_harness.py`.
 - [ ] Contrato (seção 4) implementado sem alteração de nomes, parâmetros ou tipos.
 - [ ] Regras da seção 6 implementadas e cobertas por testes.
-- [ ] Conformidade integral com `.context/CONTEXT_RULES.md`.
+- [ ] Conformidade integral com `CONTEXT_RULES.md`.

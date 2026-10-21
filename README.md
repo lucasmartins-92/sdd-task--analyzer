@@ -2,42 +2,42 @@
 
 [![CI](https://github.com/lucasmartins-92/sdd-task--analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/lucasmartins-92/sdd-task--analyzer/actions/workflows/ci.yml)
 
-Python 3.11+ module (standard library only) that computes task productivity metrics (late rate, mean completion time, per-priority breakdown). Built with Spec-Driven Development (SDD) and AI-generated code governed by explicit rules.
+Módulo em Python 3.11+ (somente biblioteca padrão) que calcula métricas de produtividade de tarefas: taxa de atraso, tempo médio de conclusão e detalhamento por prioridade. Foi construído com Spec-Driven Development (SDD), com código gerado por IA e regido por regras explícitas de governança.
 
-## Repository structure
+## Estrutura do repositório
 
 ```
-CONTEXT_RULES.md, CONTEXT_RULES_en.md    AI governance rules
-CLAUDE.md                                agent entry point
-specs/task_analyzer_spec.md              contract (source of truth)
+CONTEXT_RULES.md, CONTEXT_RULES_en.md    regras de governança para IA
+CLAUDE.md                                ponto de entrada para o agente
+specs/task_analyzer_spec.md              contrato (fonte da verdade)
 .github/
-  workflows/ci.yml                        GitHub Actions pipeline
+  workflows/ci.yml                       pipeline do GitHub Actions
   PULL_REQUEST_TEMPLATE.md
 src/
-  modules/task_analyzer.py                business logic
-  shared/exceptions.py                    custom exceptions
-tests/test_harness.py                     acceptance tests (immutable)
+  modules/task_analyzer.py               regras de negócio
+  shared/exceptions.py                   exceções personalizadas
+tests/test_harness.py                    testes de aceitação (imutáveis)
 Dockerfile, docker-compose.yml, .dockerignore
 requirements.txt, pytest.ini
 ```
 
-## Run locally
+## Executando localmente
 
 ```bash
 pip install -r requirements.txt
 pytest tests/test_harness.py -v
 ```
 
-## Run with Docker
+## Executando com Docker
 
 ```bash
 docker compose run --rm tests
-# or
+# ou
 docker build -t task-analyzer . && docker run --rm task-analyzer
 ```
 
-## Project phases
+## Fases do projeto
 
-1. **Phase 1 – SDD:** contract and `CONTEXT_RULES.md` define what the AI may build.
-2. **Phase 2 – AI code + pytest:** `TaskAnalyzer` implemented per contract and validated by the acceptance harness.
-3. **Phase 3 – CI/CD + Docker + Governance:** GitHub Actions runs the harness on every push/PR to `main`/`develop`; the Docker image makes the suite reproducible anywhere; governance report documents the process.
+1. **Fase 1 – SDD:** o contrato e o `CONTEXT_RULES.md` definem o que a IA pode construir.
+2. **Fase 2 – Código por IA + pytest:** o `TaskAnalyzer` é implementado conforme o contrato e validado pelo harness de aceitação.
+3. **Fase 3 – CI/CD + Docker + Governança:** o GitHub Actions executa o harness a cada push ou PR para `main`/`develop`; a imagem Docker torna a suíte reproduzível em qualquer ambiente; o relatório de governança documenta o processo.

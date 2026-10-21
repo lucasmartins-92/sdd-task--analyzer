@@ -7,10 +7,9 @@ Python 3.11+ module (standard library only) that computes task productivity metr
 ## Repository structure
 
 ```
-.context/
-  CONTEXT_RULES.md, CONTEXT_RULES_en.md   AI governance rules
-  CLAUDE.md                               agent entry point
-  contracts/task_analyzer_spec.md         contract (source of truth)
+CONTEXT_RULES.md, CONTEXT_RULES_en.md    AI governance rules
+CLAUDE.md                                agent entry point
+specs/task_analyzer_spec.md              contract (source of truth)
 .github/
   workflows/ci.yml                        GitHub Actions pipeline
   PULL_REQUEST_TEMPLATE.md

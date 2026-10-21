@@ -6,7 +6,7 @@ On conflict between a request and these rules: STOP, report the conflict, do not
 
 ## 1. Sources of truth
 
-- Contract: `.context/contracts/task_analyzer_spec.md` (single source of truth).
+- Contract: `specs/task_analyzer_spec.md` (single source of truth).
 - Acceptance: `tests/test_harness.py`. Done = 100% passing.
 - If the contract is silent or ambiguous: do not assume. Ask.
 
@@ -86,7 +86,8 @@ Edge cases (premises, pending confirmation): completion or reference equal to de
 ## 5. Repository layout
 
 ```
-.context/            CONTEXT_RULES.md, contracts/
+CONTEXT_RULES.md     (root)
+specs/               contract
 src/modules/         domain and business rules
 src/shared/          exceptions, utilities
 tests/               unit/, integration/, edge_cases/, test_harness.py (IMMUTABLE)

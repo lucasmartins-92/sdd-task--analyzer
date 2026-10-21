@@ -4,13 +4,13 @@ TaskAnalyzer: Python 3.11+ module for task productivity metrics, built with Spec
 
 ## Required context (loaded automatically)
 
-@.context/CONTEXT_RULES.md
-@.context/contracts/task_analyzer_spec.md
+@CONTEXT_RULES.md
+@specs/task_analyzer_spec.md
 
 ## Precedence
 
-1. `.context/CONTEXT_RULES_en.md` (governance, mandatory)
-2. `.context/contracts/task_analyzer_spec.md` (contract, single source of truth)
+1. `CONTEXT_RULES_en.md` (governance, mandatory)
+2. `specs/task_analyzer_spec.md` (contract, single source of truth)
 3. `tests/test_harness.py` (acceptance, immutable)
 4. User prompt
 
